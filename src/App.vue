@@ -1,34 +1,50 @@
 <template>
-  <main>
-    <h1>IAmConfused</h1>
-    <p>Find careers that match your skills and interests.</p>
+  <div class="p-6 max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">IAmConfused - Career Finder</h1>
 
-    <div>
-      <label>Skills</label>
-      <input v-model="skillsInput" placeholder="e.g. coding, design, writing" />
-
-      <label>Interests</label>
-      <input v-model="interestsInput" placeholder="e.g. AI, environment, teaching" />
+    <!-- Input Section -->
+    <div class="flex flex-col md:flex-row gap-4 mb-6">
+      <input
+        v-model="skillsInput"
+        type="text"
+        placeholder="Enter your skills"
+        class="border p-2 rounded w-full"
+      />
+      <input
+        v-model="interestsInput"
+        type="text"
+        placeholder="Enter your interests"
+        class="border p-2 rounded w-full"
+      />
+      <button
+        @click="searchCareers"
+        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+      >
+        Search
+      </button>
+    </div>
 
       <button @click="searchCareers">Search</button>
     </div>
 
-    <div>
-      <h2>Results</h2>
-      <p>No results yet.</p>
+    <div v-else>
+      <p class="text-gray-500">No results found. Try different skills or interests.</p>
     </div>
-  </main>
+  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import jobs from './data/jobs.json'
 
+// Inputs
 const skillsInput = ref('')
 const interestsInput = ref('')
 
-const filteredJobs = ref([...jobsData])
+// Filtered results (reactive)
+const filteredJobs = ref([])
 
+// Function to filter careers
 function searchCareers() {
   filteredJobs.value = jobs.filter(
     (job) =>
