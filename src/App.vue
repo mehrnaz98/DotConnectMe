@@ -21,6 +21,8 @@
 </template>
 
 <script setup>
+import jobs from './data/jobs.json'
+
 import { ref } from 'vue'
 
 const skillsInput = ref('')
