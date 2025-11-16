@@ -24,7 +24,20 @@
       </button>
     </div>
 
-      <button @click="searchCareers">Search</button>
+    <!-- Results Section -->
+    <div v-if="filteredJobs.length">
+      <h2 class="text-xl font-semibold mb-4">Suggested Careers</h2>
+      <ul class="space-y-4">
+        <li
+          v-for="job in filteredJobs"
+          :key="job.id"
+          class="border p-4 rounded hover:shadow-md cursor-pointer"
+        >
+          <h3 class="font-bold text-lg">{{ job.title }}</h3>
+          <p><strong>Skills:</strong> {{ job.skills.join(', ') }}</p>
+          <p><strong>Interests:</strong> {{ job.interests.join(', ') }}</p>
+        </li>
+      </ul>
     </div>
 
     <div v-else>
