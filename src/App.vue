@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import jobs from './data/jobs.json'
+import jobsData from './data/jobs.json'
 
 import { ref } from 'vue'
 
