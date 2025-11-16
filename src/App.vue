@@ -31,8 +31,12 @@ const interestsInput = ref('')
 const filteredJobs = ref([...jobsData])
 
 function searchCareers() {
-  console.log('Skills:', skillsInput.value)
-  console.log('Interests:', interestsInput.value)
-  alert('Search triggered!')
+  filteredJobs.value = jobs.filter(
+    (job) =>
+      job.skills.some((skill) => skill.toLowerCase().includes(skillsInput.value.toLowerCase())) |
+      job.interests.some((interest) =>
+        interest.toLowerCase().includes(interestsInput.value.toLowerCase()),
+      ),
+  )
 }
 </script>
