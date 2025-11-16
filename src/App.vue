@@ -28,6 +28,8 @@ import { ref } from 'vue'
 const skillsInput = ref('')
 const interestsInput = ref('')
 
+const filteredJobs = ref([...jobsData])
+
 function searchCareers() {
   console.log('Skills:', skillsInput.value)
   console.log('Interests:', interestsInput.value)
