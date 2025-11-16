@@ -1,0 +1,203 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "skills": ["HTML", "CSS", "JavaScript", "problem-solving", "UI design"],
+    "interests": ["web development", "design", "creativity", "technology"],
+    "description": "Frontend developers build the part of websites that users see and interact with. They focus on design, layout, and functionality to create a smooth user experience.",
+    "relatedLearning": [
+      "HTML basics",
+      "CSS styling",
+      "JavaScript fundamentals",
+      "responsive design"
+    ],
+    "projectIdeas": [
+      "Personal portfolio website",
+      "Simple to-do app",
+      "Landing page for a small business"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "skills": ["Python", "Node.js", "Databases", "problem-solving", "API development"],
+    "interests": ["web development", "data management", "logic", "technology"],
+    "description": "Backend developers work on the server side of websites and apps. They manage databases, servers, and application logic that powers the frontend.",
+    "relatedLearning": [
+      "Python basics",
+      "Node.js fundamentals",
+      "SQL basics",
+      "REST API introduction"
+    ],
+    "projectIdeas": ["Simple blog backend", "User login system", "Basic e-commerce API"]
+  },
+  {
+    "id": 3,
+    "title": "Data Analyst",
+    "skills": ["Excel", "SQL", "data visualization", "problem-solving", "critical thinking"],
+    "interests": ["data", "numbers", "analysis", "patterns"],
+    "description": "Data analysts study and interpret data to help businesses make informed decisions. They create charts and reports to explain trends and insights.",
+    "relatedLearning": [
+      "Excel formulas",
+      "SQL basics",
+      "Data visualization tools",
+      "Statistics basics"
+    ],
+    "projectIdeas": [
+      "Analyze sales data",
+      "Create interactive charts",
+      "Monthly performance report"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "UX Designer",
+    "skills": ["Wireframing", "User research", "Creativity", "problem-solving", "Prototyping"],
+    "interests": ["design", "user experience", "creativity", "technology"],
+    "description": "UX designers focus on making products easy and enjoyable to use. They research user needs and design interfaces that solve problems effectively.",
+    "relatedLearning": [
+      "Basic wireframing",
+      "User research methods",
+      "Prototyping tools",
+      "UI design principles"
+    ],
+    "projectIdeas": [
+      "Redesign a website layout",
+      "Create a mobile app prototype",
+      "Conduct a small user test"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Cybersecurity Analyst",
+    "skills": ["Networking", "Problem-solving", "Python", "Monitoring", "Security basics"],
+    "interests": ["technology", "security", "puzzles", "problem-solving"],
+    "description": "Cybersecurity analysts protect computer systems from hackers and threats. They monitor systems, identify vulnerabilities, and implement security measures.",
+    "relatedLearning": [
+      "Networking basics",
+      "Python scripting",
+      "Security fundamentals",
+      "Threat detection basics"
+    ],
+    "projectIdeas": [
+      "Set up a home firewall",
+      "Create a password manager script",
+      "Monitor a small network for threats"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Mobile App Developer",
+    "skills": ["Java", "Kotlin", "Swift", "problem-solving", "UI design"],
+    "interests": ["apps", "technology", "creativity", "problem-solving"],
+    "description": "Mobile app developers create applications for smartphones and tablets. They focus on functionality, usability, and performance for mobile users.",
+    "relatedLearning": [
+      "Java/Kotlin basics",
+      "Swift basics",
+      "UI design for mobile",
+      "App testing"
+    ],
+    "projectIdeas": ["Simple calculator app", "To-do list app", "Weather forecast app"]
+  },
+  {
+    "id": 7,
+    "title": "AI/ML Enthusiast",
+    "skills": [
+      "Python",
+      "Data analysis",
+      "Problem-solving",
+      "Math basics",
+      "Machine learning basics"
+    ],
+    "interests": ["AI", "technology", "data", "innovation"],
+    "description": "AI/ML enthusiasts work with algorithms that allow computers to learn from data. They create models that can predict outcomes or recognize patterns.",
+    "relatedLearning": [
+      "Python basics",
+      "Pandas/Numpy",
+      "Machine learning introduction",
+      "Basic statistics"
+    ],
+    "projectIdeas": ["Simple image classifier", "Predicting house prices", "Chatbot prototype"]
+  },
+  {
+    "id": 8,
+    "title": "Digital Marketer",
+    "skills": ["SEO", "Social media", "Creativity", "Content creation", "Analytics"],
+    "interests": ["marketing", "communication", "technology", "trends"],
+    "description": "Digital marketers help businesses reach customers online. They create campaigns, optimize websites, and analyze performance to improve results.",
+    "relatedLearning": [
+      "SEO basics",
+      "Social media marketing",
+      "Content creation tools",
+      "Google Analytics basics"
+    ],
+    "projectIdeas": [
+      "Plan a social media campaign",
+      "Create a blog post series",
+      "Analyze website traffic"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Game Developer",
+    "skills": ["C#", "Unity", "Problem-solving", "Creativity", "Animation basics"],
+    "interests": ["gaming", "technology", "creativity", "storytelling"],
+    "description": "Game developers design and build video games. They combine coding, art, and storytelling to create fun and interactive experiences.",
+    "relatedLearning": ["Unity basics", "C# basics", "Game mechanics", "Simple animation"],
+    "projectIdeas": ["Create a 2D platformer", "Simple puzzle game", "Basic character animation"]
+  },
+  {
+    "id": 10,
+    "title": "Business Analyst",
+    "skills": ["Excel", "Problem-solving", "Communication", "Data analysis", "Critical thinking"],
+    "interests": ["business", "data", "strategy", "planning"],
+    "description": "Business analysts study processes and data to help companies improve. They suggest solutions to increase efficiency and profitability.",
+    "relatedLearning": [
+      "Excel basics",
+      "Data analysis",
+      "Business process mapping",
+      "Report writing"
+    ],
+    "projectIdeas": [
+      "Analyze sales trends",
+      "Create a process improvement plan",
+      "Prepare a business report"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Cloud Engineer",
+    "skills": ["AWS", "Problem-solving", "Networking", "Python", "System administration"],
+    "interests": ["cloud computing", "technology", "infrastructure", "automation"],
+    "description": "Cloud engineers design and maintain cloud systems for businesses. They manage servers, storage, and services hosted online.",
+    "relatedLearning": [
+      "Cloud basics",
+      "AWS free tier",
+      "Networking fundamentals",
+      "Python scripting"
+    ],
+    "projectIdeas": [
+      "Deploy a website on cloud",
+      "Set up a cloud storage system",
+      "Automate a backup process"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Content Creator",
+    "skills": ["Writing", "Creativity", "Video editing", "Social media", "Communication"],
+    "interests": ["creativity", "storytelling", "marketing", "technology"],
+    "description": "Content creators produce articles, videos, and posts for online platforms. They engage audiences with informative or entertaining material.",
+    "relatedLearning": [
+      "Basic writing skills",
+      "Video editing tools",
+      "Social media basics",
+      "Content planning"
+    ],
+    "projectIdeas": [
+      "Start a YouTube channel",
+      "Write a blog series",
+      "Create social media tutorials"
+    ]
+  }
+]
