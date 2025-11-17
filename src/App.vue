@@ -67,6 +67,4 @@ function searchCareers() {
 }
 </script>
 
-<style scoped>
-/* Tailwind used, so no extra styles yet */
-</style>
+<style scoped></style>
