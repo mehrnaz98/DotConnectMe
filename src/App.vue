@@ -4,17 +4,24 @@
 
     <!-- Input Section -->
     <div class="flex flex-col md:flex-row gap-4 mb-6">
-      <input
-        v-model="skillsInput"
-        type="text"
-        placeholder="Enter your skills"
-        class="border p-2 rounded w-full"
+      <Multiselect
+        v-model="selectedSkills"
+        :options="allSkills"
+        placeholder="Select your skills"
+        multiple
+        :close-on-select="false"
+        :clear-on-select="false"
+        class="w-full"
       />
-      <input
-        v-model="interestsInput"
-        type="text"
-        placeholder="Enter your interests"
-        class="border p-2 rounded w-full"
+
+      <Multiselect
+        v-model="selectedInterests"
+        :options="allInterests"
+        placeholder="Select your interests"
+        multiple
+        :close-on-select="false"
+        :clear-on-select="false"
+        class="w-full"
       />
       <button
         @click="searchCareers"
