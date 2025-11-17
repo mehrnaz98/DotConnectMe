@@ -50,9 +50,10 @@
 import { ref } from 'vue'
 import jobs from './data/jobs.json'
 
-// Inputs
-const skillsInput = ref('')
-const interestsInput = ref('')
+// Reactive selections
+const selectedSkills = ref([])
+const selectedInterests = ref([])
+
 // Extract all unique skills and interests
 const allSkills = ref([...new Set(jobs.flatMap((job) => job.skills))])
 const allInterests = ref([...new Set(jobs.flatMap((job) => job.interests))])
