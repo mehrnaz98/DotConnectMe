@@ -57,7 +57,7 @@ const interestsInput = ref('')
 // Filtered results (reactive)
 const filteredJobs = ref([])
 
-// Function to filter careers
+// Filter careers based on selected skills/interests
 function searchCareers() {
   filteredJobs.value = jobs.filter(
     (job) =>
