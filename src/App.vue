@@ -88,6 +88,18 @@
       </p>
     </div>
     <!-- Footer Section -->
+    <div class="flex">
+      <ul class="flex gap-6">
+        <li>Home</li>
+        <li>About</li>
+        <li>How It Works</li>
+        <li>Contact</li>
+      </ul>
+      <p>
+        Built as an open-source project by
+        <a href="https://github.com/mehrnaz98">Mehrnaz Eftekhari</a>
+      </p>
+    </div>
   </div>
 </template>
 
