@@ -2,7 +2,10 @@
   <div class="p-6 max-w-4xl mx-auto">
     <h1 class="text-3xl font-bold mb-6 text-center">IAmConfused - Career Finder</h1>
 
-    <!-- Input Section -->
+    <!-- Navigation Bar -->
+    <!-- Hero Section -->
+
+    <!-- Input / Filter Section -->
     <div class="flex flex-col md:flex-row gap-4 mb-6">
       <Multiselect
         v-model="selectedSkills"
@@ -51,6 +54,11 @@
     <div v-else>
       <p class="text-gray-500">No results found. Try different skills or interests.</p>
     </div>
+
+    <!-- Results Section (your current filteredJobs code) -->
+    <!-- Details Panel (optional for now, can be hidden) -->
+    <!-- About Section -->
+    <!-- Footer Section -->
   </div>
 </template>
 
