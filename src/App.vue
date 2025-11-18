@@ -1,7 +1,5 @@
 <template>
   <div class="p-6 max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold mb-6 text-center">IAmConfused - Career Finder</h1>
-
     <!-- Navigation Bar -->
     <nav class="flex items-center justify-between p-4 bg-white shadow-md">
       <div class="text-xl font-bold text-blue-900">IAmConfused</div>
@@ -17,6 +15,17 @@
     </nav>
 
     <!-- Hero Section -->
+    <div class="flex">
+      <div>
+        <h1 class="text-3xl font-bold mb-6 text-center">Find your path.<br />Finally.</h1>
+        <p>
+          A simple tool that helps you discover careers, majors, and project ideas based on yout
+          interests.
+        </p>
+        <button class="">Start Exploring</button>
+      </div>
+      <div>SVG</div>
+    </div>
 
     <!-- Input / Filter Section -->
     <div class="flex flex-col md:flex-row gap-4 mb-6">
