@@ -80,6 +80,13 @@
     <!-- Details Panel (optional for now) -->
 
     <!-- About Section -->
+    <div>
+      <h2>About</h2>
+      <p>
+        IAmConfused helps students, career changers, and curious minds discover meaningful
+        directions with simple filtering and guidance.
+      </p>
+    </div>
     <!-- Footer Section -->
   </div>
 </template>
