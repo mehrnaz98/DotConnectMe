@@ -3,6 +3,19 @@
     <h1 class="text-3xl font-bold mb-6 text-center">IAmConfused - Career Finder</h1>
 
     <!-- Navigation Bar -->
+    <nav class="flex items-center justify-between p-4 bg-white shadow-md">
+      <div class="text-xl font-bold text-blue-900">IAmConfused</div>
+      <ul class="flex gap-6">
+        <li>Home</li>
+        <li>About</li>
+        <li>How It Works</li>
+        <li>Contact</li>
+      </ul>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Get Started
+      </button>
+    </nav>
+
     <!-- Hero Section -->
 
     <!-- Input / Filter Section -->
