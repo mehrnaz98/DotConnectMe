@@ -78,6 +78,7 @@
     </div>
 
     <!-- Details Panel (optional for now) -->
+
     <!-- About Section -->
     <!-- Footer Section -->
   </div>
