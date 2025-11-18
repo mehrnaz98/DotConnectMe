@@ -77,8 +77,8 @@
       <p class="text-gray-500">No results found. Try different skills or interests.</p>
     </div>
 
-    <!-- Results Section (your current filteredJobs code) -->
-    <!-- Details Panel (optional for now, can be hidden) -->
+    <!-- Results Section -->
+    <!-- Details Panel (optional for now) -->
     <!-- About Section -->
     <!-- Footer Section -->
   </div>
