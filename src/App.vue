@@ -1,105 +1,173 @@
 <template>
-  <div class="p-6 max-w-4xl mx-auto">
-    <!-- Navigation Bar -->
-    <nav class="flex items-center justify-between p-4 bg-white shadow-md">
+  <div class="min-h-screen flex flex-col bg-white text-[#1A1A1A]">
+    <!-- NAVBAR -->
+    <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
       <div class="text-xl font-bold text-blue-900">IAmConfused</div>
-      <ul class="flex gap-6">
-        <li>Home</li>
-        <li>About</li>
-        <li>How It Works</li>
-        <li>Contact</li>
+
+      <ul class="hidden md:flex gap-8 text-slate-600">
+        <li class="hover:text-blue-700 cursor-pointer">Home</li>
+        <li class="hover:text-blue-700 cursor-pointer">About</li>
+        <li class="hover:text-blue-700 cursor-pointer">How It Works</li>
+        <li class="hover:text-blue-700 cursor-pointer">Contact</li>
       </ul>
-      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+
+      <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600">
         Get Started
       </button>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="flex">
-      <div>
-        <h1 class="text-3xl font-bold mb-6 text-center">Find your path.<br />Finally.</h1>
-        <p>
-          A simple tool that helps you discover careers, majors, and project ideas based on yout
-          interests.
-        </p>
-        <button class="">Start Exploring</button>
+    <!-- HERO SECTION -->
+    <section class="bg-[#F2F6FA] py-16 px-6">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <!-- Hero Text -->
+        <div class="flex-1">
+          <h1 class="text-5xl font-bold leading-tight text-[#294E89] mb-6">
+            Find your path.<br />
+            Finally.
+          </h1>
+          <p class="text-gray-700 mb-6 text-lg">
+            A simple tool that helps you discover careers, majors, and project ideas based on your
+            strengths and interests.
+          </p>
+
+          <button
+            class="bg-[#294E89] text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition duration-200"
+          >
+            Start Exploring
+          </button>
+        </div>
+
+        <!-- SVG Placeholder -->
+        <div class="flex-1 flex justify-center">
+          <img src="./svg-findpath.png" alt="Hero illustration" class="w-80 h-auto" />
+        </div>
       </div>
-      <div>SVG</div>
-    </div>
+    </section>
 
-    <!-- Input / Filter Section -->
-    <div class="flex flex-col md:flex-row gap-4 mb-6">
-      <Multiselect
-        v-model="selectedSkills"
-        :options="allSkills"
-        placeholder="Select your skills"
-        multiple
-        :close-on-select="false"
-        :clear-on-select="false"
-        class="w-full"
-      />
+    <!-- MAIN GRID: Filters + Results (2/3) | Details (1/3) -->
+    <section class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 px-6 py-10 max-w-7xl mx-auto">
+      <!-- LEFT SIDE: Filter Inputs + Results -->
+      <div>
+        <!-- FILTER AREA -->
+        <div class="bg-white p-6 rounded-xl shadow mb-6">
+          <h2 class="text-xl font-semibold text-blue-900 mb-4">Filter Careers</h2>
 
-      <Multiselect
-        v-model="selectedInterests"
-        :options="allInterests"
-        placeholder="Select your interests"
-        multiple
-        :close-on-select="false"
-        :clear-on-select="false"
-        class="w-full"
-      />
+          <div class="flex flex-col md:flex-row gap-4">
+            <Multiselect
+              v-model="selectedSkills"
+              :options="allSkills"
+              placeholder="Select your skills"
+              multiple
+              :close-on-select="false"
+              :clear-on-select="false"
+              class="w-full"
+            />
 
-      <button
-        @click="searchCareers"
-        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        Search
-      </button>
-    </div>
+            <Multiselect
+              v-model="selectedInterests"
+              :options="allInterests"
+              placeholder="Select your interests"
+              multiple
+              :close-on-select="false"
+              :clear-on-select="false"
+              class="w-full"
+            />
+          </div>
 
-    <!-- Results Section -->
-    <div v-if="filteredJobs.length">
-      <h2 class="text-xl font-semibold mb-4">Suggested Careers</h2>
-      <ul class="space-y-4">
-        <li
-          v-for="job in filteredJobs"
-          :key="job.id"
-          class="border p-4 rounded hover:shadow-md cursor-pointer"
-        >
-          <h3 class="font-bold text-lg">{{ job.title }}</h3>
-          <p><strong>Skills:</strong> {{ job.skills.join(', ') }}</p>
-          <p><strong>Interests:</strong> {{ job.interests.join(', ') }}</p>
-        </li>
-      </ul>
-    </div>
+          <button
+            @click="searchCareers"
+            class="mt-4 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 shadow"
+          >
+            Search
+          </button>
+        </div>
 
-    <div v-else>
-      <p class="text-gray-500">No results found. Try different skills or interests.</p>
-    </div>
+        <!-- RESULTS LIST -->
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h2 class="text-xl font-semibold mb-4 text-blue-900">Suggested Careers</h2>
 
-    <!-- Details Panel (optional for now) -->
+          <!-- Cards -->
+          <div v-if="filteredJobs.length" class="space-y-4">
+            <div
+              v-for="job in filteredJobs"
+              :key="job.id"
+              @click="selectJob(job)"
+              class="border p-4 rounded-lg hover:shadow-md cursor-pointer transition bg-white"
+            >
+              <h3 class="font-bold text-lg text-blue-800">{{ job.title }}</h3>
+              <p class="text-sm text-slate-600">
+                <strong>Skills:</strong> {{ job.skills.join(', ') }}
+              </p>
+              <p class="text-sm text-slate-600">
+                <strong>Interests:</strong> {{ job.interests.join(', ') }}
+              </p>
+            </div>
+          </div>
 
-    <!-- About Section -->
-    <div>
-      <h2>About</h2>
-      <p>
+          <p v-else class="text-slate-500">No results found. Try different skills or interests.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: DETAILS PANEL -->
+      <aside class="bg-white p-6 rounded-xl shadow sticky top-6 h-fit">
+        <h2 class="text-xl font-semibold text-blue-900 mb-4">Career Details</h2>
+
+        <div v-if="selectedJob">
+          <h3 class="text-2xl font-bold text-blue-800 mb-2">
+            {{ selectedJob.title }}
+          </h3>
+
+          <p class="mb-4 text-slate-700">
+            {{ selectedJob.description || 'No description available yet.' }}
+          </p>
+
+          <h4 class="font-semibold text-blue-900">Required Skills:</h4>
+          <ul class="list-disc ml-6 mb-4 text-slate-700">
+            <li v-for="skill in selectedJob.skills" :key="skill">{{ skill }}</li>
+          </ul>
+
+          <h4 class="font-semibold text-blue-900">Related Industries:</h4>
+          <ul class="list-disc ml-6 mb-4 text-slate-700">
+            <li v-for="i in selectedJob.interests" :key="i">{{ i }}</li>
+          </ul>
+
+          <h4 class="font-semibold text-blue-900">Example Learning Path:</h4>
+          <p class="mb-4 text-slate-700 text-sm italic">Coming soon…</p>
+
+          <h4 class="font-semibold text-blue-900">Example Projects:</h4>
+          <p class="text-slate-700 text-sm italic">Coming soon…</p>
+        </div>
+
+        <div v-else class="text-slate-500">Select a career from the left to see more details.</div>
+      </aside>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="px-6 py-16 max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4">About</h2>
+      <p class="text-slate-700 text-lg">
         IAmConfused helps students, career changers, and curious minds discover meaningful
         directions with simple filtering and guidance.
       </p>
-    </div>
-    <!-- Footer Section -->
-    <div class="flex">
-      <ul class="flex gap-6">
-        <li>Home</li>
-        <li>About</li>
-        <li>How It Works</li>
-        <li>Contact</li>
-      </ul>
-      <p>
-        Built as an open-source project by
-        <a href="https://github.com/mehrnaz98">Mehrnaz Eftekhari</a>
-      </p>
-    </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-8 mt-10 shadow-inner">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+        <ul class="flex gap-6 text-slate-600 mb-4 md:mb-0">
+          <li>Home</li>
+          <li>About</li>
+          <li>How It Works</li>
+          <li>Contact</li>
+        </ul>
+        <p class="text-slate-600">
+          Built as an open-source project by
+          <a class="text-blue-600 font-semibold" href="https://github.com/mehrnaz98"
+            >Mehrnaz Eftekhari</a
+          >
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
