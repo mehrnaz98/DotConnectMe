@@ -177,15 +177,15 @@ import Multiselect from 'vue-multiselect'
 import 'vue-multiselect/dist/vue-multiselect.min.css'
 import jobs from './data/jobs.json'
 
-// Reactive selections
+// Inputs
 const selectedSkills = ref([])
 const selectedInterests = ref([])
 
-// Extract all unique skills and interests
+// Unique sets
 const allSkills = ref([...new Set(jobs.flatMap((job) => job.skills))])
 const allInterests = ref([...new Set(jobs.flatMap((job) => job.interests))])
 
-// Filtered results (reactive)
+// Results
 const filteredJobs = ref([])
 
 // Filter careers based on selected skills/interests
