@@ -188,13 +188,20 @@ const allInterests = ref([...new Set(jobs.flatMap((job) => job.interests))])
 // Results
 const filteredJobs = ref([])
 
-// Filter careers based on selected skills/interests
+// Selected job for details sidebar
+const selectedJob = ref(null)
+
 function searchCareers() {
   filteredJobs.value = jobs.filter(
     (job) =>
       job.skills.some((skill) => selectedSkills.value.includes(skill)) ||
       job.interests.some((interest) => selectedInterests.value.includes(interest)),
   )
+  selectedJob.value = null
+}
+
+function selectJob(job) {
+  selectedJob.value = job
 }
 </script>
 
