@@ -78,7 +78,7 @@
             @click="searchCareers"
             class="mt-4 bg-[#59B2AC] text-white px-5 py-2 rounded-lg hover:bg-[#3ABFAB] shadow"
           >
-            Search
+            Show suggestions
           </button>
         </div>
 
