@@ -11,7 +11,7 @@
         <li class="hover:text-blue-700 cursor-pointer">Contact</li>
       </ul>
 
-      <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600">
+      <button class="bg-[#59B2AC] text-white px-4 py-2 rounded-lg shadow hover:bg-[#3ABFAB]">
         Get Started
       </button>
     </nav>
@@ -76,7 +76,7 @@
 
           <button
             @click="searchCareers"
-            class="mt-4 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 shadow"
+            class="mt-4 bg-[#59B2AC] text-white px-5 py-2 rounded-lg hover:bg-[#3ABFAB] shadow"
           >
             Search
           </button>
@@ -152,15 +152,15 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-white py-8 mt-10 shadow-inner">
+    <footer class="bg-[#59B2AC] py-8 mt-10 shadow-inner">
       <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-        <ul class="flex gap-6 text-slate-600 mb-4 md:mb-0">
+        <ul class="flex gap-6 text-white mb-4 md:mb-0">
           <li>Home</li>
           <li>About</li>
           <li>How It Works</li>
           <li>Contact</li>
         </ul>
-        <p class="text-slate-600">
+        <p class="text-white">
           Built as an open-source project by
           <a class="text-blue-600 font-semibold" href="https://github.com/mehrnaz98"
             >Mehrnaz Eftekhari</a
