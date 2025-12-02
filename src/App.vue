@@ -198,7 +198,7 @@ const selectedJob = ref(null)
 function searchCareers() {
   filteredJobs.value = jobs.filter(
     (job) =>
-      job.skills.some((skill) => selectedSkills.value.includes(skill)) &
+      job.skills.some((skill) => selectedSkills.value.includes(skill)) &&
       job.interests.some((interest) => selectedInterests.value.includes(interest)),
   )
   selectedJob.value = null
