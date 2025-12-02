@@ -199,5 +199,316 @@
       "Write a blog series",
       "Create social media tutorials"
     ]
+  },
+  {
+    "id": 13,
+    "title": "DevOps Engineer",
+    "skills": ["CI/CD", "Docker", "Kubernetes", "Linux", "Scripting"],
+    "interests": ["automation", "infrastructure", "cloud", "efficiency"],
+    "description": "DevOps engineers bridge the gap between development and operations. They automate workflows, maintain deployments, and ensure system reliability.",
+    "relatedLearning": [
+      "CI/CD pipelines",
+      "Docker basics",
+      "Kubernetes fundamentals",
+      "Linux commands"
+    ],
+    "projectIdeas": [
+      "Automate deployment for a small app",
+      "Set up a monitoring dashboard",
+      "Containerize a web application"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Product Manager",
+    "skills": [
+      "Communication",
+      "Project management",
+      "Problem-solving",
+      "Data analysis",
+      "UX understanding"
+    ],
+    "interests": ["strategy", "product design", "business", "technology"],
+    "description": "Product managers oversee the development and delivery of products. They define goals, coordinate teams, and ensure the product meets user needs.",
+    "relatedLearning": [
+      "Agile methodology",
+      "Roadmap planning",
+      "User story writing",
+      "Stakeholder communication"
+    ],
+    "projectIdeas": ["Plan a new app feature", "Create a product roadmap", "Conduct a user survey"]
+  },
+  {
+    "id": 15,
+    "title": "AI Prompt Engineer",
+    "skills": ["Prompt design", "Python", "AI understanding", "Creativity", "Testing"],
+    "interests": ["AI", "writing", "problem-solving", "innovation"],
+    "description": "AI prompt engineers craft effective instructions for AI systems to achieve desired outputs. They test prompts and refine them for clarity and accuracy.",
+    "relatedLearning": [
+      "Python basics",
+      "Prompt engineering techniques",
+      "AI tool testing",
+      "Creative problem-solving"
+    ],
+    "projectIdeas": [
+      "Design prompts for AI image generation",
+      "Test AI for customer support",
+      "Create an AI writing assistant"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Blockchain Developer",
+    "skills": ["Solidity", "Smart Contracts", "Cryptography", "Ethereum", "Problem-solving"],
+    "interests": ["blockchain", "technology", "finance", "innovation"],
+    "description": "Blockchain developers build decentralized applications and smart contracts. They work on secure, transparent systems for finance, identity, and more.",
+    "relatedLearning": [
+      "Solidity basics",
+      "Ethereum blockchain fundamentals",
+      "Smart contract deployment",
+      "Cryptography basics"
+    ],
+    "projectIdeas": [
+      "Create a simple token",
+      "Build a decentralized voting system",
+      "Develop a blockchain-based game"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "UX Researcher",
+    "skills": ["User interviews", "Surveys", "Data analysis", "Empathy", "Critical thinking"],
+    "interests": ["user experience", "design", "psychology", "research"],
+    "description": "UX researchers study how users interact with products. They collect insights and recommend improvements to make experiences intuitive and enjoyable.",
+    "relatedLearning": [
+      "Conducting interviews",
+      "Survey design",
+      "Usability testing",
+      "Data interpretation"
+    ],
+    "projectIdeas": [
+      "Test a mobile app for usability",
+      "Conduct a survey on website navigation",
+      "Prepare a user experience report"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Graphic Designer",
+    "skills": ["Adobe Photoshop", "Illustrator", "Creativity", "Color theory", "Typography"],
+    "interests": ["art", "design", "visual storytelling", "creativity"],
+    "description": "Graphic designers create visual content for print and digital media. They communicate ideas through images, typography, and layouts.",
+    "relatedLearning": [
+      "Adobe Photoshop basics",
+      "Illustrator tutorials",
+      "Typography principles",
+      "Color theory"
+    ],
+    "projectIdeas": [
+      "Design a brand logo",
+      "Create social media graphics",
+      "Make a poster for an event"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Teacher / Educator",
+    "skills": ["Communication", "Patience", "Lesson planning", "Problem-solving", "Creativity"],
+    "interests": ["education", "mentoring", "helping others", "teaching"],
+    "description": "Teachers plan and deliver lessons, inspire students, and create a supportive learning environment.",
+    "relatedLearning": [
+      "Lesson planning techniques",
+      "Classroom management",
+      "Pedagogy basics",
+      "Communication skills"
+    ],
+    "projectIdeas": ["Prepare a lesson plan", "Teach a mini-class", "Create educational materials"]
+  },
+  {
+    "id": 20,
+    "title": "Entrepreneur / Small Business Owner",
+    "skills": [
+      "Business planning",
+      "Marketing",
+      "Financial literacy",
+      "Problem-solving",
+      "Networking"
+    ],
+    "interests": ["business", "innovation", "finance", "leadership"],
+    "description": "Entrepreneurs start and run businesses, identify opportunities, and manage resources to deliver value.",
+    "relatedLearning": [
+      "Business plan writing",
+      "Market research",
+      "Basic accounting",
+      "Sales & marketing"
+    ],
+    "projectIdeas": [
+      "Launch a small online store",
+      "Develop a marketing plan",
+      "Test a new product concept"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Event Planner",
+    "skills": ["Organization", "Budgeting", "Creativity", "Communication", "Time management"],
+    "interests": ["events", "people", "planning", "creativity"],
+    "description": "Event planners organize meetings, parties, or conferences. They manage logistics, vendors, and client expectations to deliver memorable experiences.",
+    "relatedLearning": [
+      "Event planning basics",
+      "Budgeting skills",
+      "Vendor coordination",
+      "Timeline creation"
+    ],
+    "projectIdeas": [
+      "Plan a birthday party",
+      "Organize a community event",
+      "Create a wedding timeline"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Journalist / Content Writer",
+    "skills": ["Writing", "Research", "Critical thinking", "Interviewing", "Storytelling"],
+    "interests": ["communication", "current affairs", "writing", "media"],
+    "description": "Journalists research, write, and report stories for media outlets. They inform the public and analyze events critically.",
+    "relatedLearning": [
+      "Writing basics",
+      "Research skills",
+      "Interview techniques",
+      "Storytelling"
+    ],
+    "projectIdeas": [
+      "Write an article on a local event",
+      "Conduct an interview and summarize findings",
+      "Create a blog post series"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Biologist",
+    "skills": ["Research", "Observation", "Data analysis", "Lab techniques", "Critical thinking"],
+    "interests": ["nature", "animals", "plants", "science", "research"],
+    "description": "Biologists study living organisms and their environments. They conduct experiments, observe ecosystems, and contribute to scientific understanding.",
+    "relatedLearning": ["Biology basics", "Lab safety", "Microscopy", "Field research techniques"],
+    "projectIdeas": [
+      "Observe local wildlife",
+      "Conduct a small plant growth experiment",
+      "Create a species journal"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Chemist",
+    "skills": [
+      "Laboratory skills",
+      "Critical thinking",
+      "Data analysis",
+      "Problem-solving",
+      "Safety protocols"
+    ],
+    "interests": ["science", "experiments", "research", "chemicals"],
+    "description": "Chemists study substances, their properties, and reactions. They develop new materials, test compounds, and solve scientific problems.",
+    "relatedLearning": [
+      "Chemistry fundamentals",
+      "Laboratory safety",
+      "Reaction experiments",
+      "Data recording"
+    ],
+    "projectIdeas": [
+      "Create a simple chemical reaction demonstration",
+      "Test household acids and bases",
+      "Document observations in a lab journal"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Historian",
+    "skills": ["Research", "Critical thinking", "Writing", "Analysis", "Presentation"],
+    "interests": ["history", "research", "reading", "culture"],
+    "description": "Historians research past events, analyze sources, and communicate findings. They help societies understand their heritage and learn from the past.",
+    "relatedLearning": [
+      "Historical research methods",
+      "Archival studies",
+      "Writing historical essays",
+      "Source analysis"
+    ],
+    "projectIdeas": [
+      "Write a short history of your town",
+      "Analyze primary sources from an event",
+      "Create a timeline of a historical period"
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Art Curator",
+    "skills": ["Art history", "Organization", "Communication", "Research", "Creativity"],
+    "interests": ["art", "museums", "history", "culture"],
+    "description": "Art curators manage collections in galleries or museums. They research, preserve, and exhibit artworks while educating the public.",
+    "relatedLearning": [
+      "Art history basics",
+      "Museum studies",
+      "Cataloging techniques",
+      "Exhibit design"
+    ],
+    "projectIdeas": [
+      "Organize a mini art exhibition",
+      "Write descriptions for artworks",
+      "Research an artist’s biography"
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Environmental Scientist",
+    "skills": ["Research", "Fieldwork", "Data analysis", "Problem-solving", "Critical thinking"],
+    "interests": ["nature", "sustainability", "science", "ecology"],
+    "description": "Environmental scientists study ecosystems, pollution, and climate. They develop solutions to environmental challenges and inform policy decisions.",
+    "relatedLearning": [
+      "Ecology basics",
+      "Field sampling",
+      "Data collection methods",
+      "Sustainability concepts"
+    ],
+    "projectIdeas": [
+      "Measure water quality in a local stream",
+      "Track local biodiversity",
+      "Create a recycling awareness campaign"
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Museum Educator",
+    "skills": ["Communication", "Research", "Public speaking", "Creativity", "Organization"],
+    "interests": ["history", "art", "culture", "education"],
+    "description": "Museum educators create programs and tours to help visitors understand exhibits. They make history and art engaging for all ages.",
+    "relatedLearning": [
+      "Lesson planning",
+      "Exhibit research",
+      "Storytelling techniques",
+      "Educational program design"
+    ],
+    "projectIdeas": [
+      "Design a tour for kids at a local museum",
+      "Create an educational handout",
+      "Host a mini workshop"
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Astronomer",
+    "skills": ["Math", "Physics", "Observation", "Data analysis", "Research"],
+    "interests": ["space", "science", "astronomy", "research"],
+    "description": "Astronomers study celestial objects and phenomena. They analyze data, observe the universe, and contribute to our understanding of space.",
+    "relatedLearning": [
+      "Astronomy basics",
+      "Telescope usage",
+      "Physics fundamentals",
+      "Data analysis techniques"
+    ],
+    "projectIdeas": [
+      "Track moon phases",
+      "Observe planets using a telescope",
+      "Create a star chart"
+    ]
   }
 ]
