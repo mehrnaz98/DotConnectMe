@@ -39,7 +39,7 @@
 
         <!-- SVG Placeholder -->
         <div class="flex-1 flex justify-center">
-          <img src="./connectthedots2.png" alt="Hero illustration" class="w-80 h-auto" />
+          <img src="./connectthedots.png" alt="Hero illustration" class="w-80 h-auto" />
         </div>
       </div>
     </section>
