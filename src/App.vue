@@ -2,7 +2,7 @@
   <div class="min-h-screen flex flex-col bg-white text-[#1A1A1A]">
     <!-- NAVBAR -->
     <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
-      <div class="text-xl font-bold text-blue-900">IAmConfused</div>
+      <div class="text-xl font-bold text-blue-900">DotConnectMe</div>
 
       <ul class="hidden md:flex gap-8 text-slate-600">
         <li class="hover:text-blue-700 cursor-pointer">Home</li>
@@ -146,7 +146,7 @@
     <section class="px-6 py-16 max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-blue-900 mb-4">About</h2>
       <p class="text-slate-700 text-lg">
-        IAmConfused helps students, career changers, and curious minds discover meaningful
+        DotConnectMe helps students, career changers, and curious minds discover meaningful
         directions with simple filtering and guidance.
       </p>
     </section>
