@@ -2,7 +2,10 @@
   <div class="min-h-screen flex flex-col bg-white text-[#1A1A1A]">
     <!-- NAVBAR -->
     <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
-      <div class="text-xl font-bold text-blue-900">DotConnectMe</div>
+      <div class="text-xl flex items-center space-x-3 font-bold text-blue-900">
+        <img src="/connect-favicon.png" alt="logo" class="w-8 h-8" />
+        <span>DotConnectMe</span>
+      </div>
 
       <ul class="hidden md:flex gap-8 text-slate-600">
         <li class="hover:text-blue-700 cursor-pointer">Home</li>
