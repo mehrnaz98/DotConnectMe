@@ -22,12 +22,12 @@
         <!-- Hero Text -->
         <div class="flex-1">
           <h1 class="text-5xl font-bold leading-tight text-[#294E89] mb-6">
-            Find your path.<br />
-            Finally.
+            Connect The Dots ...<br />
+            Find Your Path.
           </h1>
           <p class="text-gray-700 mb-6 text-lg">
-            A simple tool that helps you discover careers, majors, and project ideas based on your
-            strengths and interests.
+            A simple tool that helps you make sense of your abilities, interests, and finally, life
+            and career goals.
           </p>
 
           <button
@@ -39,7 +39,7 @@
 
         <!-- SVG Placeholder -->
         <div class="flex-1 flex justify-center">
-          <img src="./svg-findpath.png" alt="Hero illustration" class="w-80 h-auto" />
+          <img src="./connectthedots2.png" alt="Hero illustration" class="w-80 h-auto" />
         </div>
       </div>
     </section>
@@ -161,6 +161,7 @@
           <li>Contact</li>
         </ul>
         <p class="text-white">
+          © 2025 DotConnectMe – Prototype<br />
           Built as an open-source project by
           <a class="text-blue-600 font-semibold" href="https://github.com/mehrnaz98"
             >Mehrnaz Eftekhari</a
@@ -194,7 +195,7 @@ const selectedJob = ref(null)
 function searchCareers() {
   filteredJobs.value = jobs.filter(
     (job) =>
-      job.skills.some((skill) => selectedSkills.value.includes(skill)) ||
+      job.skills.some((skill) => selectedSkills.value.includes(skill)) &
       job.interests.some((interest) => selectedInterests.value.includes(interest)),
   )
   selectedJob.value = null
