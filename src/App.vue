@@ -1,23 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col bg-white text-[#1A1A1A]">
     <!-- NAVBAR -->
-    <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
-      <div class="text-xl flex items-center space-x-3 font-bold text-blue-900">
-        <img src="/connect-favicon.png" alt="logo" class="w-8 h-8" />
-        <span>DotConnectMe</span>
-      </div>
-
-      <ul class="hidden md:flex gap-8 text-slate-600">
-        <li class="hover:text-blue-700 cursor-pointer">Home</li>
-        <li class="hover:text-blue-700 cursor-pointer">About</li>
-        <li class="hover:text-blue-700 cursor-pointer">How It Works</li>
-        <li class="hover:text-blue-700 cursor-pointer">Contact</li>
-      </ul>
-
-      <button class="bg-[#59B2AC] text-white px-4 py-2 rounded-lg shadow hover:bg-[#3ABFAB]">
-        Get Started
-      </button>
-    </nav>
+    <Navbar />
 
     <!-- HERO SECTION -->
     <section class="bg-[#F2F6FA] py-16 px-6">
@@ -180,6 +164,7 @@ import { ref } from 'vue'
 import Multiselect from 'vue-multiselect'
 import 'vue-multiselect/dist/vue-multiselect.min.css'
 import jobs from './data/jobs.json'
+import Navbar from './components/Navbar.vue'
 
 // Inputs
 const selectedSkills = ref([])
