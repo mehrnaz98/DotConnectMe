@@ -4,7 +4,7 @@
     <Navbar />
 
     <!-- HERO SECTION -->
-    <Hero />
+    <AppHero />
 
     <!-- MAIN GRID: Filters + Results (2/3) | Details (1/3) -->
     <section class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 px-6 py-10 max-w-7xl mx-auto">
@@ -114,7 +114,7 @@
     </section>
 
     <!-- FOOTER -->
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 
@@ -124,8 +124,8 @@ import Multiselect from 'vue-multiselect'
 import 'vue-multiselect/dist/vue-multiselect.min.css'
 import jobs from './data/jobs.json'
 import Navbar from './components/Navbar.vue'
-import Hero from './components/Hero.vue'
-import Footer from './components/Footer.vue'
+import AppHero from './components/AppHero.vue'
+import AppFooter from './components/AppFooter.vue'
 
 // Inputs
 const selectedSkills = ref([])
