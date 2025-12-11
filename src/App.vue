@@ -6,6 +6,9 @@
     <!-- HERO SECTION -->
     <AppHero />
 
+    <!-- Ikigai SECTION -->
+    <IkigaiSection />
+
     <!-- MAIN GRID: Filters + Results (2/3) | Details (1/3) -->
     <section class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 px-6 py-10 max-w-7xl mx-auto">
       <!-- LEFT SIDE: Filter Inputs + Results -->
@@ -126,6 +129,7 @@ import jobs from './data/jobs.json'
 import Navbar from './components/Navbar.vue'
 import AppHero from './components/AppHero.vue'
 import AppFooter from './components/AppFooter.vue'
+import IkigaiSection from './components/IkigaiSection.vue'
 
 // Inputs
 const selectedSkills = ref([])
