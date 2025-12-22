@@ -138,14 +138,12 @@ function toggleSelection(pillarKey, option) {
 // COMPUTE SUGGESTED CAREERS BASED ON SELECTIONS
 const suggestedCareers = computed(() => {
   // Flatten all selections into one array
-  const allSelections = Object.values(selections).flat()
+  const selectedTags = Object.values(selections)
+    .flat()
+    .flatMap((option) => ikigaiTagMap[option] || [])
 
   // Filter jobs.json for any overlap with skills or interests
-  return jobs.filter(
-    (job) =>
-      job.skills.some((skill) => allSelections.includes(skill)) ||
-      job.interests.some((interest) => allSelections.includes(interest)),
-  )
+  return jobs.filter((job) => job.tags?.some((tag) => selectedTags.includes(tag)))
 })
 </script>
 
