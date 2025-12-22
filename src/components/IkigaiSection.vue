@@ -2,6 +2,7 @@
   <section class="px-6 py-16 max-w-5xl mx-auto bg-gray-50 rounded-xl shadow">
     <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center">Discover Your Ikigai</h2>
 
+    <!-- IKIGAI QUIZ -->
     <div v-for="(pillar, index) in pillars" :key="index" class="mb-8">
       <h3 class="text-xl font-semibold text-blue-800 mb-4">{{ pillar.title }}</h3>
       <p class="text-gray-700 mb-4">{{ pillar.question }}</p>
@@ -21,15 +22,19 @@
       </div>
     </div>
 
+    <!-- SHOW SUMMARY BUTTON -->
     <button
       @click="showSummary = true"
       class="mt-6 bg-[#294E89] text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition"
     >
-      Show My Summary
+      Show My Summary & Suggested Careers
     </button>
 
+    <!-- IKIGAI SUMMARY -->
     <div v-if="showSummary" class="mt-8 p-6 bg-white rounded-xl shadow">
       <h3 class="text-2xl font-bold text-blue-800 mb-4">Your Ikigai Summary</h3>
+
+      <!-- User Selections -->
       <div v-for="pillar in pillars" :key="pillar.key" class="mb-4">
         <h4 class="font-semibold text-blue-900">{{ pillar.title }}:</h4>
         <p class="text-gray-700" v-if="selections[pillar.key].length">
@@ -37,13 +42,26 @@
         </p>
         <p class="text-gray-400" v-else>None selected</p>
       </div>
+
+      <!-- Career Suggestions -->
+      <div class="mt-6">
+        <h4 class="font-semibold text-blue-900 mb-2">Suggested Careers:</h4>
+        <ul class="list-disc ml-6">
+          <li v-for="job in suggestedCareers" :key="job.id">
+            <strong>{{ job.title }}</strong> — {{ job.description }}
+          </li>
+        </ul>
+        <p v-if="suggestedCareers.length === 0" class="text-gray-500">No matching careers found.</p>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive, ref, computed } from 'vue'
+import jobs from '../data/jobs.json'
 
+// IKIGAI QUESTIONS
 const pillars = [
   {
     key: 'passion',
@@ -99,6 +117,7 @@ const pillars = [
   },
 ]
 
+// STORE USER SELECTIONS
 const selections = reactive({
   passion: [],
   profession: [],
@@ -106,13 +125,28 @@ const selections = reactive({
   vocation: [],
 })
 
+// SHOW SUMMARY FLAG
 const showSummary = ref(false)
 
+// TOGGLE USER SELECTIONS
 function toggleSelection(pillarKey, option) {
   const index = selections[pillarKey].indexOf(option)
   if (index === -1) selections[pillarKey].push(option)
   else selections[pillarKey].splice(index, 1)
 }
+
+// COMPUTE SUGGESTED CAREERS BASED ON SELECTIONS
+const suggestedCareers = computed(() => {
+  // Flatten all selections into one array
+  const allSelections = Object.values(selections).flat()
+
+  // Filter jobs.json for any overlap with skills or interests
+  return jobs.filter(
+    (job) =>
+      job.skills.some((skill) => allSelections.includes(skill)) ||
+      job.interests.some((interest) => allSelections.includes(interest)),
+  )
+})
 </script>
 
 <style scoped>
