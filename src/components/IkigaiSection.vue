@@ -135,6 +135,40 @@ function toggleSelection(pillarKey, option) {
   else selections[pillarKey].splice(index, 1)
 }
 
+const ikigaiTagMap = {
+  // PASSION
+  'Creating art, music, or writing': ['creativity', 'design', 'content'],
+  'Solving puzzles or analyzing problems': ['problem-solving', 'analysis', 'logic'],
+  'Helping people or volunteering': ['helping', 'social impact', 'support'],
+  'Building or fixing things': ['engineering', 'hands-on', 'technical'],
+  'Leading and organizing projects': ['leadership', 'management'],
+  'Learning new topics continuously': ['learning', 'research', 'curiosity'],
+
+  // PROFESSION
+  'Creative thinking (design, art, writing)': ['design', 'creativity'],
+  'Logical analysis & problem-solving': ['problem-solving', 'analysis'],
+  'Communication & teamwork': ['communication', 'teamwork'],
+  'Technical skills (coding, engineering, mechanics)': ['coding', 'engineering', 'technical'],
+  'Leadership & decision-making': ['leadership'],
+  'Adaptability & learning new skills quickly': ['learning', 'adaptability'],
+
+  // MISSION
+  'Inspire and educate others': ['education', 'teaching'],
+  'Solve pressing technical or scientific challenges': ['technology', 'science'],
+  'Support and improve people’s lives': ['health', 'social impact'],
+  'Build products or services that improve society': ['product', 'innovation'],
+  'Create opportunities and lead communities': ['leadership', 'community'],
+  'Explore and share knowledge': ['research', 'education'],
+
+  // VOCATION
+  'Arts, content creation, media': ['design', 'content', 'media'],
+  'Technology, data, engineering': ['technology', 'engineering', 'coding'],
+  'Healthcare, education, social work': ['health', 'education', 'social impact'],
+  'Business, management, entrepreneurship': ['business', 'management'],
+  'Research, innovation, science': ['research', 'science'],
+  'Consulting, advising, training': ['consulting', 'training'],
+}
+
 // COMPUTE SUGGESTED CAREERS BASED ON SELECTIONS
 const suggestedCareers = computed(() => {
   // Flatten all selections into one array
