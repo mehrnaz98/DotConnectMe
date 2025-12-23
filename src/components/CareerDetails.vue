@@ -21,6 +21,11 @@
         <li v-for="i in job.interests" :key="i">{{ i }}</li>
       </ul>
 
+      <h4 class="font-semibold text-blue-900">Project Ideas:</h4>
+      <ul class="list-disc ml-6 mb-4 text-slate-700">
+        <li v-for="i in job.projectIdeas" :key="i">{{ i }}</li>
+      </ul>
+
       <p class="text-sm italic text-slate-600">AI roadmap coming soon…</p>
     </div>
 
