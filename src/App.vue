@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col bg-white text-[#1A1A1A]">
-    <!-- Navbar is always visible -->
+    <!-- Navbar -->
     <Navbar />
 
     <!-- Page content -->
