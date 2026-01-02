@@ -102,7 +102,7 @@
 </template>
 
 <script setup>
-import { reactive, ref, computed } from 'vue'
+import { reactive, ref, computed, watch } from 'vue'
 import jobs from '../data/jobs.json'
 
 /* PURPOSE QUESTION */
@@ -234,6 +234,12 @@ const suggestedCareers = computed(() => {
     .flatMap((option) => ikigaiTagMap[option] || [])
 
   return jobs.filter((job) => job.tags?.some((tag) => selectedTags.includes(tag)))
+})
+
+const emit = defineEmits(['update:selectedCareers'])
+
+watch(suggestedCareers, (val) => {
+  emit('update:selectedCareers', val)
 })
 </script>
 
