@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import HomePage from '../pages/HomePage.vue'
 import CareerFilterPage from '../pages/CareerFilterPage.vue'
 import IkigaiPage from '../pages/IkigaiPage.vue'
 
 const routes = [
-  { path: '/', redirect: '/career-filter' },
-  { path: '/career-filter', component: CareerFilterPage },
-  { path: '/ikigai', component: IkigaiPage },
+  { path: '/', name: 'Home', component: HomePage },
+  { path: '/career-filter', name: 'CareerFilter', component: CareerFilterPage },
+  { path: '/ikigai', name: 'Ikigai', component: IkigaiPage },
 ]
 
 const router = createRouter({
