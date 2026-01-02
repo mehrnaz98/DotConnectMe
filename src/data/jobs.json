@@ -16,7 +16,7 @@
       "Simple to-do app",
       "Landing page for a small business"
     ],
-    "tags": ["frontend", "web", "ui", "design", "javascript", "creativity"]
+    "tags": ["coding", "design", "creativity", "technology", "problem-solving"]
   },
   {
     "id": 2,
@@ -31,7 +31,7 @@
       "REST API introduction"
     ],
     "projectIdeas": ["Simple blog backend", "User login system", "Basic e-commerce API"],
-    "tags": ["backend", "server", "databases", "api", "logic", "problem-solving"]
+    "tags": ["coding", "technology", "analysis", "problem-solving", "databases"]
   },
   {
     "id": 3,
@@ -50,7 +50,7 @@
       "Create interactive charts",
       "Monthly performance report"
     ],
-    "tags": ["data", "analysis", "visualization", "sql", "statistics", "insights"]
+    "tags": ["analysis", "data", "problem-solving", "research", "statistics"]
   },
   {
     "id": 4,
@@ -69,7 +69,7 @@
       "Create a mobile app prototype",
       "Conduct a small user test"
     ],
-    "tags": ["ux", "user-research", "design", "prototyping", "usability", "creativity"]
+    "tags": ["design", "creativity", "research", "problem-solving", "user-experience"]
   },
   {
     "id": 5,
@@ -88,7 +88,7 @@
       "Create a password manager script",
       "Monitor a small network for threats"
     ],
-    "tags": ["security", "cybersecurity", "networking", "monitoring", "threats", "python"]
+    "tags": ["technology", "security", "problem-solving", "technical", "analysis"]
   },
   {
     "id": 6,
@@ -103,7 +103,7 @@
       "App testing"
     ],
     "projectIdeas": ["Simple calculator app", "To-do list app", "Weather forecast app"],
-    "tags": ["mobile", "apps", "ui", "development", "problem-solving", "technology"]
+    "tags": ["coding", "technology", "creativity", "problem-solving", "design"]
   },
   {
     "id": 7,
@@ -124,7 +124,7 @@
       "Basic statistics"
     ],
     "projectIdeas": ["Simple image classifier", "Predicting house prices", "Chatbot prototype"],
-    "tags": ["ai", "machine-learning", "data", "python", "models", "innovation"]
+    "tags": ["ai", "machine-learning", "coding", "data", "analysis", "research"]
   },
   {
     "id": 8,
@@ -143,7 +143,7 @@
       "Create a blog post series",
       "Analyze website traffic"
     ],
-    "tags": ["marketing", "seo", "content", "analytics", "social-media", "campaigns"]
+    "tags": ["marketing", "creativity", "content", "analytics", "communication", "technology"]
   },
   {
     "id": 9,
@@ -153,7 +153,7 @@
     "description": "Game developers design and build video games. They combine coding, art, and storytelling to create fun and interactive experiences.",
     "relatedLearning": ["Unity basics", "C# basics", "Game mechanics", "Simple animation"],
     "projectIdeas": ["Create a 2D platformer", "Simple puzzle game", "Basic character animation"],
-    "tags": ["games", "game-dev", "unity", "creativity", "storytelling", "coding"]
+    "tags": ["coding", "creativity", "design", "technology", "storytelling", "problem-solving"]
   },
   {
     "id": 10,
@@ -172,7 +172,7 @@
       "Create a process improvement plan",
       "Prepare a business report"
     ],
-    "tags": ["business", "analysis", "strategy", "data", "processes", "decision-making"]
+    "tags": ["business", "analysis", "strategy", "data", "decision-making", "problem-solving"]
   },
   {
     "id": 11,
@@ -191,7 +191,7 @@
       "Set up a cloud storage system",
       "Automate a backup process"
     ],
-    "tags": ["cloud", "infrastructure", "aws", "automation", "networking", "systems"]
+    "tags": ["cloud", "technology", "infrastructure", "automation", "problem-solving", "systems"]
   },
   {
     "id": 12,
@@ -210,7 +210,7 @@
       "Write a blog series",
       "Create social media tutorials"
     ],
-    "tags": ["content", "writing", "video", "social-media", "creativity", "storytelling"]
+    "tags": ["content", "creativity", "writing", "storytelling", "media", "communication"]
   },
   {
     "id": 13,
@@ -229,7 +229,7 @@
       "Set up a monitoring dashboard",
       "Containerize a web application"
     ],
-    "tags": ["devops", "automation", "containers", "ci-cd", "infrastructure", "reliability"]
+    "tags": ["devops", "automation", "infrastructure", "technical", "cloud", "systems"]
   },
   {
     "id": 14,
@@ -250,7 +250,7 @@
       "Stakeholder communication"
     ],
     "projectIdeas": ["Plan a new app feature", "Create a product roadmap", "Conduct a user survey"],
-    "tags": ["product", "strategy", "management", "ux", "planning", "coordination"]
+    "tags": ["product", "management", "strategy", "coordination", "business", "planning"]
   },
   {
     "id": 15,
@@ -269,7 +269,7 @@
       "Test AI for customer support",
       "Create an AI writing assistant"
     ],
-    "tags": ["ai", "prompts", "writing", "testing", "creativity", "optimization"]
+    "tags": ["ai", "coding", "writing", "creativity", "testing", "problem-solving"]
   },
   {
     "id": 16,
@@ -288,7 +288,7 @@
       "Build a decentralized voting system",
       "Develop a blockchain-based game"
     ],
-    "tags": ["blockchain", "smart-contracts", "crypto", "decentralized", "security", "finance"]
+    "tags": ["blockchain", "coding", "technology", "finance", "security", "problem-solving"]
   },
   {
     "id": 17,
@@ -307,7 +307,7 @@
       "Conduct a survey on website navigation",
       "Prepare a user experience report"
     ],
-    "tags": ["ux", "research", "users", "empathy", "insights", "analysis"]
+    "tags": ["research", "user-experience", "analysis", "empathy", "design", "problem-solving"]
   },
   {
     "id": 18,
@@ -326,7 +326,7 @@
       "Create social media graphics",
       "Make a poster for an event"
     ],
-    "tags": ["graphic-design", "visuals", "branding", "typography", "creativity", "art"]
+    "tags": ["design", "creativity", "art", "visuals", "branding", "typography"]
   },
   {
     "id": 19,
@@ -404,7 +404,7 @@
       "Conduct an interview and summarize findings",
       "Create a blog post series"
     ],
-    "tags": ["journalism", "writing", "research", "media", "storytelling", "analysis"]
+    "tags": ["journalism", "writing", "research", "media", "storytelling", "communication"]
   },
   {
     "id": 23,
@@ -418,7 +418,7 @@
       "Conduct a small plant growth experiment",
       "Create a species journal"
     ],
-    "tags": ["biology", "science", "research", "nature", "experiments", "analysis"]
+    "tags": ["biology", "science", "research", "experiments", "nature", "analysis"]
   },
   {
     "id": 24,
@@ -443,7 +443,7 @@
       "Test household acids and bases",
       "Document observations in a lab journal"
     ],
-    "tags": ["chemistry", "lab", "experiments", "science", "analysis", "research"]
+    "tags": ["chemistry", "science", "research", "experiments", "analysis", "technical"]
   },
   {
     "id": 25,
@@ -462,7 +462,7 @@
       "Analyze primary sources from an event",
       "Create a timeline of a historical period"
     ],
-    "tags": ["history", "research", "writing", "analysis", "culture", "archives"]
+    "tags": ["history", "research", "writing", "analysis", "culture", "education"]
   },
   {
     "id": 26,
@@ -500,7 +500,7 @@
       "Track local biodiversity",
       "Create a recycling awareness campaign"
     ],
-    "tags": ["environment", "sustainability", "ecology", "science", "research", "fieldwork"]
+    "tags": ["environment", "science", "research", "sustainability", "fieldwork", "analysis"]
   },
   {
     "id": 28,
@@ -519,7 +519,7 @@
       "Create an educational handout",
       "Host a mini workshop"
     ],
-    "tags": ["education", "museums", "public-speaking", "culture", "storytelling", "learning"]
+    "tags": ["education", "teaching", "culture", "communication", "learning", "museums"]
   },
   {
     "id": 29,
@@ -538,6 +538,6 @@
       "Observe planets using a telescope",
       "Create a star chart"
     ],
-    "tags": ["astronomy", "space", "science", "research", "data", "observation"]
+    "tags": ["astronomy", "science", "research", "observation", "data", "analysis"]
   }
 ]
