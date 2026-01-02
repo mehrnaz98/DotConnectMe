@@ -8,7 +8,9 @@
 
     <!-- Desktop Links -->
     <ul class="hidden md:flex gap-8 text-slate-600">
-      <li class="hover:text-blue-700 cursor-pointer">Home</li>
+      <li>
+        <router-link to="/" class="hover:text-blue-700">Home</router-link>
+      </li>
       <li class="hover:text-blue-700 cursor-pointer">About</li>
       <li class="hover:text-blue-700 cursor-pointer">How It Works</li>
       <li class="hover:text-blue-700 cursor-pointer">Contact</li>
@@ -45,7 +47,7 @@
   <!-- Mobile Menu -->
   <div v-if="isOpen" class="md:hidden bg-white shadow-sm px-6 py-4">
     <ul class="flex flex-col gap-4 text-slate-600">
-      <li class="hover:text-blue-700 cursor-pointer">Home</li>
+      <li><router-link to="/" class="hover:text-blue-700">Home</router-link></li>
       <li class="hover:text-blue-700 cursor-pointer">About</li>
       <li class="hover:text-blue-700 cursor-pointer">How It Works</li>
       <li class="hover:text-blue-700 cursor-pointer">Contact</li>
