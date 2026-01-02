@@ -14,12 +14,14 @@
 
         <div class="flex flex-col md:flex-row gap-4">
           <button
+            @click="$router.push('/career-filter')"
             class="bg-[#294E89] text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition duration-200"
           >
             I Know My Skills & Interests
           </button>
 
           <button
+            @click="$router.push('/ikigai')"
             class="bg-[#59B2AC] text-white px-6 py-3 rounded-lg hover:bg-[#3ABFAB] transition duration-200"
           >
             I’m Not Sure What I Want
