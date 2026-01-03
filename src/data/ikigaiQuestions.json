@@ -1,0 +1,83 @@
+[
+  {
+    "id": "energy_source",
+    "question": "When you are tired but still need to do something, what feels least draining?",
+    "options": [
+      { "text": "Solving a logical or technical problem", "interests": ["technology", "analysis"] },
+      {
+        "text": "Helping someone understand or decide something",
+        "interests": ["people", "impact"]
+      },
+      { "text": "Creating or designing something from scratch", "interests": ["creativity"] },
+      { "text": "Organizing, planning, or improving a process", "interests": ["structure"] }
+    ]
+  },
+  {
+    "id": "problem_style",
+    "question": "Which kind of problem do you naturally take responsibility for?",
+    "options": [
+      { "text": "Things that are broken or inefficient", "interests": ["technology", "analysis"] },
+      { "text": "People feeling stuck or confused", "interests": ["people", "impact"] },
+      {
+        "text": "Things that look boring or unclear and could be improved",
+        "interests": ["creativity"]
+      },
+      { "text": "Situations with chaos and no clear plan", "interests": ["structure"] }
+    ]
+  },
+  {
+    "id": "work_preference",
+    "question": "In a group project, what role do you usually end up playing?",
+    "options": [
+      { "text": "The one who builds or fixes the core thing", "interests": ["technology"] },
+      { "text": "The one who communicates and aligns everyone", "interests": ["people"] },
+      { "text": "The one who brings ideas and new directions", "interests": ["creativity"] },
+      {
+        "text": "The one who plans, organizes, and keeps things on track",
+        "interests": ["structure"]
+      }
+    ]
+  },
+  {
+    "id": "learning_style",
+    "question": "You feel most satisfied when learning something that...",
+    "options": [
+      {
+        "text": "Explains how systems work under the hood",
+        "interests": ["technology", "analysis"]
+      },
+      { "text": "Helps you understand people or behavior", "interests": ["people"] },
+      { "text": "Lets you express ideas or aesthetics", "interests": ["creativity"] },
+      { "text": "Gives you clear rules and frameworks", "interests": ["structure"] }
+    ]
+  },
+  {
+    "id": "impact_view",
+    "question": "What kind of impact would make you proud in 5 years?",
+    "options": [
+      {
+        "text": "Building something useful that many people rely on",
+        "interests": ["technology", "impact"]
+      },
+      { "text": "Directly improving people’s lives", "interests": ["people", "impact"] },
+      {
+        "text": "Creating something original that reflects your ideas",
+        "interests": ["creativity"]
+      },
+      {
+        "text": "Making complex things simpler and more reliable",
+        "interests": ["structure", "analysis"]
+      }
+    ]
+  },
+  {
+    "id": "environment",
+    "question": "Which work environment sounds most comfortable long-term?",
+    "options": [
+      { "text": "Quiet focus with deep thinking", "interests": ["analysis", "technology"] },
+      { "text": "Interaction and collaboration with others", "interests": ["people"] },
+      { "text": "Freedom to explore and experiment", "interests": ["creativity"] },
+      { "text": "Clear expectations and stable routines", "interests": ["structure"] }
+    ]
+  }
+]
