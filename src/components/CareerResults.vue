@@ -1,28 +1,55 @@
 <template>
   <div class="bg-white p-6 rounded-xl shadow">
-    <h2 class="text-xl font-semibold mb-4 text-blue-900">Suggested Careers</h2>
+    <h2 class="text-xl font-semibold mb-6 text-blue-900">Suggested Careers</h2>
 
-    <div v-if="jobs.length" class="space-y-4">
-      <div
-        v-for="job in jobs"
-        :key="job.id"
-        @click="$emit('select', job)"
-        class="border p-4 rounded-lg hover:shadow-md cursor-pointer transition bg-white"
-      >
-        <h3 class="font-bold text-lg text-blue-800">{{ job.title }}</h3>
-        <p class="text-sm text-slate-600"><strong>Skills:</strong> {{ job.skills.join(', ') }}</p>
-        <p class="text-sm text-slate-600">
-          <strong>Interests:</strong> {{ job.interests.join(', ') }}
-        </p>
-      </div>
+    <!-- BEST MATCHES -->
+    <div v-if="bestMatches.length" class="mb-8">
+      <h3 class="text-lg font-bold text-green-700 mb-3">Best matches (skills + interests)</h3>
+
+      <JobCard v-for="job in bestMatches" :key="job.id" :job="job" @select="$emit('select', job)" />
     </div>
 
-    <p v-else class="text-slate-500">No results found. Try different skills or interests.</p>
+    <!-- SKILL MATCHES -->
+    <div v-if="skillMatches.length" class="mb-8">
+      <h3 class="text-lg font-bold text-blue-700 mb-3">Matches based on your skills</h3>
+
+      <JobCard
+        v-for="job in skillMatches"
+        :key="job.id"
+        :job="job"
+        @select="$emit('select', job)"
+      />
+    </div>
+
+    <!-- INTEREST MATCHES -->
+    <div v-if="interestMatches.length">
+      <h3 class="text-lg font-bold text-purple-700 mb-3">Matches based on your interests</h3>
+
+      <JobCard
+        v-for="job in interestMatches"
+        :key="job.id"
+        :job="job"
+        @select="$emit('select', job)"
+      />
+    </div>
+
+    <p v-if="!jobs.length" class="text-slate-500 text-center mt-6">
+      No results found. Try different skills or interests.
+    </p>
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+import JobCard from './JobCard.vue'
+
+const props = defineProps({
   jobs: Array,
 })
+
+const bestMatches = computed(() => props.jobs.filter((j) => j.matchType === 'best'))
+
+const skillMatches = computed(() => props.jobs.filter((j) => j.matchType === 'skill'))
+
+const interestMatches = computed(() => props.jobs.filter((j) => j.matchType === 'interest'))
 </script>
