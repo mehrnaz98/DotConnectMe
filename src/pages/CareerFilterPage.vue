@@ -1,7 +1,12 @@
 <template>
   <section class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 px-6 py-10 max-w-7xl mx-auto">
     <div>
-      <CareerFilter :all-skills="allSkills" :all-interests="allInterests" @search="searchCareers" />
+      <CareerFilter
+        :all-skills="allSkills"
+        :all-interests="allInterests"
+        :preselected-interests="selectedInterests"
+        @search="searchCareers"
+      />
 
       <CareerResults :jobs="filteredJobs" @select="selectJob" />
     </div>
@@ -11,11 +16,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import jobs from '../data/jobs.json'
 import CareerFilter from '../components/CareerFilter.vue'
 import CareerResults from '../components/CareerResults.vue'
 import CareerDetails from '../components/CareerDetails.vue'
+
+const route = useRoute()
 
 const selectedSkills = ref([])
 const selectedInterests = ref([])
@@ -24,6 +32,16 @@ const selectedJob = ref(null)
 
 const allSkills = [...new Set(jobs.flatMap((j) => j.skills))]
 const allInterests = [...new Set(jobs.flatMap((j) => j.interests))]
+
+// Preselect interests from query
+onMounted(() => {
+  if (route.query.interests) {
+    const preselected = route.query.interests.split(',')
+    selectedInterests.value = allInterests.filter((i) => preselected.includes(i))
+    // Automatically search with preselected interests
+    searchCareers({ skills: [], interests: selectedInterests.value })
+  }
+})
 
 function searchCareers({ skills, interests }) {
   selectedSkills.value = skills
@@ -57,6 +75,7 @@ function searchCareers({ skills, interests }) {
     ...interestOnlyMatches.map((j) => ({ ...j, matchType: 'interest' })),
   ]
 
+  // Do NOT auto-select first job
   selectedJob.value = null
 }
 
