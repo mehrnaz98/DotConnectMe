@@ -34,19 +34,32 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import Multiselect from 'vue-multiselect'
 import 'vue-multiselect/dist/vue-multiselect.min.css'
 
 const props = defineProps({
   allSkills: Array,
   allInterests: Array,
+  preselectedInterests: { type: Array, default: () => [] },
 })
 
 const emit = defineEmits(['search'])
 
 const localSkills = ref([])
-const localInterests = ref([])
+const localInterests = ref([...props.preselectedInterests])
+
+const route = useRoute()
+
+// On mount, preselect interests from query params
+onMounted(() => {
+  if (route.query.interests) {
+    const preselected = route.query.interests.split(',')
+    // Filter to valid options
+    localInterests.value = props.allInterests.filter((i) => preselected.includes(i))
+  }
+})
 
 function submitFilters() {
   emit('search', {
