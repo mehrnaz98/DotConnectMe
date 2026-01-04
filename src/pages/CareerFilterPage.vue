@@ -29,11 +29,33 @@ function searchCareers({ skills, interests }) {
   selectedSkills.value = skills
   selectedInterests.value = interests
 
-  filteredJobs.value = jobs.filter(
+  const bestMatches = jobs.filter(
     (job) =>
+      skills.length > 0 &&
+      interests.length > 0 &&
       job.skills.some((s) => skills.includes(s)) &&
       job.interests.some((i) => interests.includes(i)),
   )
+
+  const skillOnlyMatches = jobs.filter(
+    (job) =>
+      skills.length > 0 &&
+      job.skills.some((s) => skills.includes(s)) &&
+      !job.interests.some((i) => interests.includes(i)),
+  )
+
+  const interestOnlyMatches = jobs.filter(
+    (job) =>
+      interests.length > 0 &&
+      job.interests.some((i) => interests.includes(i)) &&
+      !job.skills.some((s) => skills.includes(s)),
+  )
+
+  filteredJobs.value = [
+    ...bestMatches.map((j) => ({ ...j, matchType: 'best' })),
+    ...skillOnlyMatches.map((j) => ({ ...j, matchType: 'skill' })),
+    ...interestOnlyMatches.map((j) => ({ ...j, matchType: 'interest' })),
+  ]
 
   selectedJob.value = null
 }
