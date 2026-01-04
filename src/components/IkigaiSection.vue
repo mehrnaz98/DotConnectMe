@@ -33,12 +33,18 @@
         </div>
       </div>
 
+      <!-- Show button only if all questions answered -->
       <button
         @click="showResult = true"
-        class="mt-6 bg-[#294E89] text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition"
+        :disabled="!allAnswered"
+        class="mt-6 px-6 py-3 rounded-lg transition text-white disabled:bg-gray-400 disabled:cursor-not-allowed bg-[#294E89] hover:bg-blue-900"
       >
         See My Result
       </button>
+
+      <p v-if="!allAnswered" class="text-gray-500 mt-2 text-sm">
+        Please answer all questions so we can give you helpful insights!
+      </p>
     </div>
 
     <!-- RESULT -->
@@ -93,6 +99,9 @@ function toggleAnswer(questionId, option) {
 function isSelected(questionId, optionText) {
   return answers.value[questionId]?.some((o) => o.text === optionText)
 }
+
+// checks if all questions have at least one selected option
+const allAnswered = computed(() => questions.every((q) => answers.value[q.id]?.length > 0))
 
 // calculate interest scores
 const interestScores = computed(() => {
