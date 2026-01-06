@@ -122,7 +122,7 @@ const interestScores = computed(() => {
     .forEach((opt) => {
       // count each interest
       opt.interests.forEach((i) => {
-        scores[i] = (scores[i] || 0) + 1
+        scores[i] = (scores[i] || 0) + 1 // scores[i] → current count for interest i, (scores[i] || 0) → 0 if first time, +1 → increment, scores[i] = ... → save updated count
       })
     })
 
