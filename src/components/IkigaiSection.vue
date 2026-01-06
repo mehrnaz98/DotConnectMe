@@ -61,12 +61,21 @@
         step is to narrow things down using real-world skills.
       </p>
 
-      <button
-        @click="goToFilter"
-        class="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition"
-      >
-        Explore Careers Based on This
-      </button>
+      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <button
+          @click="goToFilter"
+          class="w-full sm:w-auto bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition"
+        >
+          Explore Careers Based on This
+        </button>
+
+        <button
+          @click="resetQuiz"
+          class="w-full sm:w-auto border border-blue-700 text-blue-700 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
+        >
+          Take the quiz again
+        </button>
+      </div>
     </div>
   </section>
 </template>
@@ -134,5 +143,10 @@ function goToFilter() {
       interests: topInterests.value.join(','),
     },
   })
+}
+
+function resetQuiz() {
+  showResult.value = false
+  answers.value = {}
 }
 </script>
