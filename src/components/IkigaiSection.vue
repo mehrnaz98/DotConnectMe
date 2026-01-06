@@ -129,10 +129,10 @@ const interestScores = computed(() => {
 
 // take top interests
 const topInterests = computed(() => {
-  return Object.entries(interestScores.value)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 3)
-    .map(([key]) => key)
+  return Object.entries(interestScores.value) // convert scores object to array
+    .sort((a, b) => b[1] - a[1]) // sort by frequency descending
+    .slice(0, 3) // take top 3 interests
+    .map(([key]) => key) // just keep the interest names
 })
 
 // route to filter with preselected interests
