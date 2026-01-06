@@ -116,9 +116,11 @@ const allAnswered = computed(() => questions.every((q) => answers.value[q.id]?.l
 const interestScores = computed(() => {
   const scores = {}
 
+  // go through all selected answers
   Object.values(answers.value)
-    .flat()
+    .flat() // flatten arrays of answers for all questions
     .forEach((opt) => {
+      // count each interest
       opt.interests.forEach((i) => {
         scores[i] = (scores[i] || 0) + 1
       })
