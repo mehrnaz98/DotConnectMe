@@ -49,45 +49,52 @@
 
     <!-- RESULT -->
 
-    <div v-else class="bg-white p-6 rounded-xl shadow">
+    <div v-else>
       <div
         v-for="(answer, index) in selectedAnswers"
         :key="index"
         class="bg-white p-4 rounded-lg shadow mb-4"
       >
-        <p class="font-semibold">Question: {{ answer.question }}</p>
-        <p class="mb-2">
-          Your choice: <strong>{{ answer.text }}</strong>
-        </p>
-        <p class="text-gray-700">{{ answer.explanation }}</p>
+        <p class="font-semibold mb-2">Question: {{ answer.question }}</p>
+
+        <div v-for="(choice, i) in answer.choices" :key="i" class="mb-3">
+          <p>
+            Your choice: <strong>{{ choice.text }}</strong>
+          </p>
+          <p class="text-gray-700">
+            {{ choice.explanation }}
+          </p>
+        </div>
       </div>
 
-      <h3 class="text-2xl font-bold text-blue-800 mb-4">What this says about you</h3>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-bold text-blue-800 mb-4">What this says about you</h3>
 
-      <p class="text-gray-700 mb-6">
-        You are most drawn toward:
-        <strong>{{ topInterests.join(', ') }}</strong>
-      </p>
+        <p class="text-gray-700 mb-6">
+          You are most drawn toward:
+          <strong>{{ topInterests.join(', ') }}</strong>
+        </p>
 
-      <p class="text-gray-600 mb-8">
-        This means you tend to enjoy problems and roles that align with these interests. The next
-        step is to narrow things down using real-world skills.
-      </p>
+        <p class="text-gray-600 mb-8">
+          This means you tend to enjoy problems and roles that align with these interests. The next
+          step is to narrow things down using real-world skills.
+        </p>
 
-      <div class="mt-6 flex flex-col sm:flex-row gap-4">
-        <button
-          @click="goToFilter"
-          class="w-full sm:w-auto bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition"
-        >
-          Explore Careers Based on This
-        </button>
+        <div class="mt-6 flex flex-col sm:flex-row gap-4">
+          <button
+            @click="goToFilter"
+            class="w-full sm:w-auto bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition"
+          >
+            Explore Careers Based on This
+          </button>
 
-        <button
-          @click="resetQuiz"
-          class="w-full sm:w-auto border border-blue-700 text-blue-700 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
-        >
-          Take the quiz again
-        </button>
+          <button
+            @click="resetQuiz"
+            class="w-full sm:w-auto border border-blue-700 text-blue-700 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
+          >
+            Take the quiz again
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -125,16 +132,18 @@ function isSelected(questionId, optionText) {
 // checks if all questions have at least one selected option
 const allAnswered = computed(() => questions.every((q) => answers.value[q.id]?.length > 0))
 
-// **NEW**: map answers to include question text and explanation
+// UPDATED: group answers by question (no repetition)
 const selectedAnswers = computed(() => {
-  return Object.entries(answers.value).flatMap(([qId, opts]) => {
+  return Object.entries(answers.value).map(([qId, opts]) => {
     const q = questions.find((q) => q.id === qId)
-    return opts.map((opt) => ({
-      question: q.question, // the question text
-      text: opt.text, // the selected option text
-      explanation: opt.explanation, // human-friendly explanation
-      interests: opt.interests, // keep interests if needed
-    }))
+    return {
+      question: q.question,
+      choices: opts.map((opt) => ({
+        text: opt.text,
+        explanation: opt.explanation,
+        interests: opt.interests,
+      })),
+    }
   })
 })
 
