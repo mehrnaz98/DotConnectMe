@@ -48,7 +48,20 @@
     </div>
 
     <!-- RESULT -->
+
     <div v-else class="bg-white p-6 rounded-xl shadow">
+      <div
+        v-for="(answer, index) in selectedAnswers"
+        :key="index"
+        class="bg-white p-4 rounded-lg shadow mb-4"
+      >
+        <p class="font-semibold">Question: {{ answer.question }}</p>
+        <p class="mb-2">
+          Your choice: <strong>{{ answer.text }}</strong>
+        </p>
+        <p class="text-gray-700">{{ answer.explanation }}</p>
+      </div>
+
       <h3 class="text-2xl font-bold text-blue-800 mb-4">What this says about you</h3>
 
       <p class="text-gray-700 mb-6">
@@ -111,6 +124,19 @@ function isSelected(questionId, optionText) {
 
 // checks if all questions have at least one selected option
 const allAnswered = computed(() => questions.every((q) => answers.value[q.id]?.length > 0))
+
+// **NEW**: map answers to include question text and explanation
+const selectedAnswers = computed(() => {
+  return Object.entries(answers.value).flatMap(([qId, opts]) => {
+    const q = questions.find((q) => q.id === qId)
+    return opts.map((opt) => ({
+      question: q.question, // the question text
+      text: opt.text, // the selected option text
+      explanation: opt.explanation, // human-friendly explanation
+      interests: opt.interests, // keep interests if needed
+    }))
+  })
+})
 
 // calculate interest scores
 const interestScores = computed(() => {
