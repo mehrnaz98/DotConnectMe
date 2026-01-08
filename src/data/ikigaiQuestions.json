@@ -3,41 +3,77 @@
     "id": "energy_source",
     "question": "When you are tired but still need to do something, what feels least draining?",
     "options": [
-      { "text": "Solving a logical or technical problem", "interests": ["technology", "analysis"] },
+      {
+        "text": "Solving a logical or technical problem",
+        "interests": ["technology", "analysis"],
+        "explanation": "Choosing 'Solving a logical or technical problem' shows you enjoy figuring things out and diving into technical challenges. You tend to thrive on analysis and logical thinking."
+      },
       {
         "text": "Helping someone understand or decide something",
-        "interests": ["communication", "helping-others"]
+        "interests": ["communication", "helping-others"],
+        "explanation": "Choosing this shows you enjoy supporting others and helping them find clarity. You are naturally drawn to communication and collaboration."
       },
-      { "text": "Creating or designing something from scratch", "interests": ["creativity"] },
-      { "text": "Organizing, planning, or improving a process", "interests": ["planning"] }
+      {
+        "text": "Creating or designing something from scratch",
+        "interests": ["creativity"],
+        "explanation": "Choosing this shows you enjoy inventing and expressing ideas. You thrive when you can explore your creativity."
+      },
+      {
+        "text": "Organizing, planning, or improving a process",
+        "interests": ["planning"],
+        "explanation": "Choosing this shows you like order, structure, and efficiency. You are drawn to roles that let you plan and improve systems."
+      }
     ]
   },
   {
     "id": "problem_style",
     "question": "Which kind of problem do you naturally take responsibility for?",
     "options": [
-      { "text": "Things that are broken or inefficient", "interests": ["technology", "analysis"] },
+      {
+        "text": "Things that are broken or inefficient",
+        "interests": ["technology", "analysis"],
+        "explanation": "You like spotting issues and solving them. Analytical thinking and technical problem-solving energize you."
+      },
       {
         "text": "People feeling stuck or confused",
-        "interests": ["communication", "helping-others"]
+        "interests": ["communication", "helping-others"],
+        "explanation": "You are drawn to helping others navigate challenges. Communication and empathy are your strengths."
       },
       {
         "text": "Things that look boring or unclear and could be improved",
-        "interests": ["creativity"]
+        "interests": ["creativity"],
+        "explanation": "You see potential where others see dullness. Creative solutions and innovation excite you."
       },
-      { "text": "Situations with chaos and no clear plan", "interests": ["planning"] }
+      {
+        "text": "Situations with chaos and no clear plan",
+        "interests": ["planning"],
+        "explanation": "You like turning disorder into structure. Planning and organizing are natural to you."
+      }
     ]
   },
   {
     "id": "work_preference",
     "question": "In a group project, what role do you usually end up playing?",
     "options": [
-      { "text": "The one who builds or fixes the core thing", "interests": ["technology"] },
-      { "text": "The one who communicates and aligns everyone", "interests": ["communication"] },
-      { "text": "The one who brings ideas and new directions", "interests": ["creativity"] },
+      {
+        "text": "The one who builds or fixes the core thing",
+        "interests": ["technology"],
+        "explanation": "You enjoy hands-on work and building things that matter. Technical focus is your strength."
+      },
+      {
+        "text": "The one who communicates and aligns everyone",
+        "interests": ["communication"],
+        "explanation": "You naturally coordinate and connect people. Communication is your key skill."
+      },
+      {
+        "text": "The one who brings ideas and new directions",
+        "interests": ["creativity"],
+        "explanation": "You are the idea generator, seeing new possibilities. Creativity is your natural mode."
+      },
       {
         "text": "The one who plans, organizes, and keeps things on track",
-        "interests": ["planning"]
+        "interests": ["planning"],
+        "explanation": "You keep the team on track and structure the workflow. Planning is where you shine."
       }
     ]
   },
@@ -47,11 +83,24 @@
     "options": [
       {
         "text": "Explains how systems work under the hood",
-        "interests": ["technology", "analysis"]
+        "interests": ["technology", "analysis"],
+        "explanation": "You love understanding how things function and analyzing details. Technical insight excites you."
       },
-      { "text": "Helps you understand people or behavior", "interests": ["communication"] },
-      { "text": "Lets you express ideas or aesthetics", "interests": ["creativity"] },
-      { "text": "Gives you clear rules and frameworks", "interests": ["planning"] }
+      {
+        "text": "Helps you understand people or behavior",
+        "interests": ["communication"],
+        "explanation": "You enjoy learning about people and interactions. Communication and empathy are your focus."
+      },
+      {
+        "text": "Lets you express ideas or aesthetics",
+        "interests": ["creativity"],
+        "explanation": "You love expressing your thoughts and vision. Creative exploration drives you."
+      },
+      {
+        "text": "Gives you clear rules and frameworks",
+        "interests": ["planning"],
+        "explanation": "You thrive when learning is structured and organized. Planning and frameworks guide you."
+      }
     ]
   },
   {
@@ -60,19 +109,23 @@
     "options": [
       {
         "text": "Building something useful that many people rely on",
-        "interests": ["technology", "helping-others"]
+        "interests": ["technology", "helping-others"],
+        "explanation": "You enjoy creating tools and systems that help others. Your focus is practical impact."
       },
       {
         "text": "Directly improving people’s lives",
-        "interests": ["communication", "helping-others"]
+        "interests": ["communication", "helping-others"],
+        "explanation": "You want to make a real difference in people's lives. Communication and empathy guide your work."
       },
       {
         "text": "Creating something original that reflects your ideas",
-        "interests": ["creativity"]
+        "interests": ["creativity"],
+        "explanation": "You want to leave your unique mark. Creativity drives your achievements."
       },
       {
         "text": "Making complex things simpler and more reliable",
-        "interests": ["planning", "analysis"]
+        "interests": ["planning", "analysis"],
+        "explanation": "You enjoy streamlining processes and solving tricky problems. Analysis and planning are your strengths."
       }
     ]
   },
@@ -80,10 +133,26 @@
     "id": "environment",
     "question": "Which work environment sounds most comfortable long-term?",
     "options": [
-      { "text": "Quiet focus with deep thinking", "interests": ["analysis", "technology"] },
-      { "text": "Interaction and collaboration with others", "interests": ["communication"] },
-      { "text": "Freedom to explore and experiment", "interests": ["creativity"] },
-      { "text": "Clear expectations and stable routines", "interests": ["planning"] }
+      {
+        "text": "Quiet focus with deep thinking",
+        "interests": ["analysis", "technology"],
+        "explanation": "You thrive in focused, deep-thinking environments. Analytical and technical tasks energize you."
+      },
+      {
+        "text": "Interaction and collaboration with others",
+        "interests": ["communication"],
+        "explanation": "You enjoy working with others and sharing ideas. Communication and collaboration are key for you."
+      },
+      {
+        "text": "Freedom to explore and experiment",
+        "interests": ["creativity"],
+        "explanation": "You prefer flexible and creative environments. Exploration and originality suit you best."
+      },
+      {
+        "text": "Clear expectations and stable routines",
+        "interests": ["planning"],
+        "explanation": "You like predictable, structured environments. Planning and organization help you excel."
+      }
     ]
   }
 ]
