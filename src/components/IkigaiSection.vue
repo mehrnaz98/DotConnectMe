@@ -53,15 +53,26 @@
       <div
         v-for="(answer, index) in selectedAnswers"
         :key="index"
-        class="bg-white p-4 rounded-lg shadow mb-4"
+        class="bg-white p-6 rounded-xl shadow-md mb-6 border border-gray-100"
       >
-        <p class="font-semibold mb-2">Question: {{ answer.question }}</p>
+        <!-- Question -->
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">
+          {{ index + 1 }}. {{ answer.question }}
+        </h3>
 
-        <div v-for="(choice, i) in answer.choices" :key="i" class="mb-3">
-          <p>
-            Your choice: <strong>{{ choice.text }}</strong>
+        <!-- Choices -->
+        <div
+          v-for="(choice, i) in answer.choices"
+          :key="i"
+          class="mb-4 pl-4 border-l-4 border-indigo-400"
+        >
+          <p class="text-sm text-gray-500 mb-1">Your choice</p>
+
+          <p class="font-medium text-indigo-700 mb-1">
+            {{ choice.text }}
           </p>
-          <p class="text-gray-700">
+
+          <p class="text-gray-700 text-sm leading-relaxed">
             {{ choice.explanation }}
           </p>
         </div>
