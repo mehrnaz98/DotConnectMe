@@ -146,6 +146,70 @@ const selectedAnswers = computed(() => {
     }
   })
 })
+/*
+Purpose of this computed property:
+- Take the raw `answers` object
+- Group selected answers by question
+- Avoid repeating the same question multiple times in the UI
+- Produce a clean, human-readable structure for the result section
+
+Raw `answers.value` looks like:
+{
+  energy_source: [option1, option2],
+  problem_style: [option3]
+}
+
+Step-by-step what happens here:
+
+1) Object.entries(answers.value)
+   Converts the object into an array so we can loop:
+   [
+     ['energy_source', [option1, option2]],
+     ['problem_style', [option3]]
+   ]
+
+2) .map(([qId, opts]) => { ... })
+   - qId  → the question ID (e.g. "energy_source")
+   - opts → array of selected options for that question
+   We now handle ONE question at a time.
+
+3) const q = questions.find(q => q.id === qId)
+   Finds the full question object from ikigaiQuestions.json
+   This gives us the human-readable question text.
+
+4) return { question, choices }
+   We build ONE object per question.
+   This is what prevents question repetition in the UI.
+
+5) choices: opts.map(opt => ({ ... }))
+   For this one question, loop over all selected answers.
+   Each selected option becomes one "choice" with:
+   - text → what the user selected
+   - explanation → human-friendly explanation
+   - interests → tags used later for scoring
+
+Final structure produced by this computed:
+[
+  {
+    question: 'When you are tired but still need to do something...',
+    choices: [
+      { text, explanation, interests },
+      { text, explanation, interests }
+    ]
+  },
+  {
+    question: 'Which kind of problem do you naturally take responsibility for?',
+    choices: [
+      { text, explanation, interests }
+    ]
+  }
+]
+
+This structure is ideal for:
+- Clean UI rendering
+- No duplicate questions
+- Clear separation of logic and presentation
+*/
 
 // calculate interest scores
 const interestScores = computed(() => {
