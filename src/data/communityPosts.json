@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "I like art and tech but don’t know which path to choose",
+    "description": "I enjoy drawing and also coding a bit. I’m not sure if I should study design or computer science.",
+    "category": "Career choice",
+    "date": "2026-02-01",
+    "comments": [
+      {
+        "id": 1,
+        "text": "You could look into UI/UX design. It combines both.",
+        "date": "2026-02-02"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Should I study IT or cybersecurity?",
+    "description": "I want something practical with job opportunities, but I don’t know which one suits me better.",
+    "category": "Study/major confusion",
+    "date": "2026-02-03",
+    "comments": []
+  }
+]
