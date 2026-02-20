@@ -10,7 +10,7 @@
       <p class="text-white">
         © 2025 DotConnectMe – Prototype<br />
         Built as an open-source project by
-        <a class="text-blue-600 font-semibold" href="https://github.com/mehrnaz98"
+        <a class="text-gray-800 font-semibold" href="https://github.com/mehrnaz98"
           >Mehrnaz Eftekhari</a
         >
       </p>
