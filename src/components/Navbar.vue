@@ -14,6 +14,9 @@
       <li class="hover:text-blue-700 cursor-pointer">About</li>
       <li class="hover:text-blue-700 cursor-pointer">How It Works</li>
       <li class="hover:text-blue-700 cursor-pointer">Contact</li>
+      <li class="hover:text-blue-700 cursor-pointer">
+        <router-link to="/community">Community</router-link>
+      </li>
     </ul>
 
     <!-- Get Started Button -->
@@ -51,6 +54,9 @@
       <li class="hover:text-blue-700 cursor-pointer">About</li>
       <li class="hover:text-blue-700 cursor-pointer">How It Works</li>
       <li class="hover:text-blue-700 cursor-pointer">Contact</li>
+      <li class="hover:text-blue-700 cursor-pointer">
+        <router-link to="/community">Community</router-link>
+      </li>
       <li>
         <button
           class="w-full bg-[#59B2AC] text-white px-4 py-2 rounded-lg shadow hover:bg-[#3ABFAB]"
