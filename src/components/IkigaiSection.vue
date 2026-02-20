@@ -3,7 +3,7 @@
     <!-- INTRO -->
     <div class="mb-10 text-center">
       <h2 class="text-3xl font-bold text-blue-900 mb-4">Discover Your Ikigai</h2>
-      <p class="text-gray-700">
+      <p class="text-gray-700" v-if="!showResult">
         Answer honestly. There are no right answers. This helps clarify what kind of work actually
         fits you.
       </p>
@@ -78,32 +78,34 @@
         </div>
       </div>
 
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-2xl font-bold text-blue-800 mb-4">What this says about you</h3>
+      <!-- FINAL RESULT -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-blue-100">
+        <h3 class="text-3xl font-extrabold text-blue-900 mb-3">What this says about you</h3>
 
-        <p class="text-gray-700 mb-6">
-          You are most drawn toward:
-          <strong>{{ topInterests.join(', ') }}</strong>
+        <p class="text-gray-700 text-lg mb-2">You are most drawn toward</p>
+
+        <p class="text-xl font-semibold text-blue-800 mb-6">
+          {{ topInterests.join(' • ') }}
         </p>
 
-        <p class="text-gray-600 mb-8">
-          This means you tend to enjoy problems and roles that align with these interests. The next
-          step is to narrow things down using real-world skills.
+        <p class="text-gray-600 mb-8 leading-relaxed">
+          This suggests you enjoy problems and roles that naturally align with these interests. The
+          next step is to turn this insight into concrete, real-world paths and skills.
         </p>
 
-        <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-4">
           <button
             @click="goToFilter"
-            class="w-full sm:w-auto bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition"
+            class="flex-1 bg-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-800 transition shadow-sm"
           >
-            Explore Careers Based on This
+            Explore careers based on this
           </button>
 
           <button
             @click="resetQuiz"
-            class="w-full sm:w-auto border border-blue-700 text-blue-700 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
+            class="flex-1 border border-gray-300 text-gray-700 px-6 py-3 rounded-xl hover:bg-gray-100 transition"
           >
-            Take the quiz again
+            Retake the quiz
           </button>
         </div>
       </div>
