@@ -2,8 +2,11 @@
 // We import ref from Vue to create reactive state
 import { ref } from 'vue'
 
-// Import initial data from local JSON file
-import initialPosts from '../data/communityPosts.json'
+// Check if something is saved under "community-posts"
+//If yes → load it
+//If no → use JSON file and Import initial data from local JSON file
+const savedPosts = localStorage.getItem('community-posts')
+const posts = ref(savedPosts ? JSON.parse(savedPosts) : [...initialPosts])
 
 /*
   posts:
