@@ -1,6 +1,6 @@
 <script setup>
 // We import ref from Vue to create reactive state
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 // Check if something is saved under "community-posts"
 //If yes → load it
@@ -103,6 +103,14 @@ function addComment(postId) {
   // Clear input after adding
   newComments.value[postId] = ''
 }
+
+watch(
+  posts,
+  (newPosts) => {
+    localStorage.setItem('community-posts', JSON.stringify(newPosts))
+  },
+  { deep: true },
+)
 </script>
 
 <template>
