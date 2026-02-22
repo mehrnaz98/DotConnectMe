@@ -1,6 +1,6 @@
 <script setup>
-// We import ref from Vue to create reactive state
 import { ref, watch } from 'vue'
+import initialPosts from '../data/communityPosts.json'
 
 // Check if something is saved under "community-posts"
 //If yes → load it
