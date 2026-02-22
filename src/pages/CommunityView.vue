@@ -9,13 +9,6 @@ const savedPosts = localStorage.getItem('community-posts')
 const posts = ref(savedPosts ? JSON.parse(savedPosts) : [...initialPosts])
 
 /*
-  posts:
-  This is the reactive array that holds all posts.
-  We copy the JSON data into it so we can modify it.
-*/
-const posts = ref([...initialPosts])
-
-/*
   newPost:
   Stores the data from the "Create Post" form.
   This object is bound to the input fields using v-model.
