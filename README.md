@@ -1,38 +1,29 @@
 # DotConnectMe
 
-This template should help get you started developing with Vue 3 in Vite.
+DotConnectMe is a Vue 3 web application designed to help users discover potential career paths based on their skills, interests, and personal preferences.
 
-## Recommended IDE Setup
+**Live Demo:** [[Netlify URL]](https://dotconnectme.netlify.app/)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Features
 
-## Recommended Browser Setup
+* Career filtering based on skills and interests
+* Ikigai-inspired self-discovery questionnaire
+* Career recommendations and matching
+* Detailed career information pages
+* Responsive user interface
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Technologies Used
 
-## Customize configuration
+* Vue 3
+* Vue Router
+* Tailwind CSS
+* Vite
+* Vue Multiselect
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Project Status
 
-## Project Setup
+This project is currently a work in progress and was created as part of my frontend development learning journey. Future improvements may include expanded career datasets, user accounts, personalized roadmaps, and AI-assisted recommendations.
 
-```sh
-npm install
-```
+## Purpose
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+The goal of this project is to help students, career changers, and individuals who feel uncertain about their future explore educational and career opportunities that align with their interests and strengths.
